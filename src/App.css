@@ -4,46 +4,6 @@
   background-image: linear-gradient(90deg, #002f52 35%, #326589);
 }
 
-.App-header {
-  height: 4.3em;
-  background-color: #ffffff;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  text-align: center;
-  padding-right: 1em;
-}
-
 li {
   list-style: none;
-}
-
-.opcoes {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  height: 100%;
-  padding-right: 1em;
-  gap: 2em;
-  cursor: pointer;
-  min-width: 120px;
-  padding-right: 5em;
-}
-
-.opcao {
-  font-size: 18px;
-}
-
-.icones {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
-  gap: 1em;
-}
-
-.icone {
-  width: 30px;
-  height: 30px;
 }
