@@ -13,7 +13,7 @@ function App() {
       <header className="App-header">
         {/*componente logo */}
         <Logo />
-
+      
         {/* usando map para array opcoes , atribuindo cada item do array para o parametro
           , entao criando um item da lista para cada opcao inserindo o parametro passado pelo map */}
         <ul className="opcoes">
