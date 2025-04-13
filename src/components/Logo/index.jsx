@@ -1,10 +1,11 @@
-import style from "../Logo/styles.css";
+import "../Logo/styles.css";
 import logo from "../../imgs/logo.svg";
 
 function Logo() {
   return (
     <div className="logo">
-      <img src={logo} alt="Logo" />
+      <img src={logo} alt="Logo" className="img-logo" />
+
       <p>
         <strong> Mafra</strong>books
       </p>
