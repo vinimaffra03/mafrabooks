@@ -10,7 +10,7 @@ const Opcoes = styled.ul`
   gap: 2em;
   cursor: pointer;
   min-width: 120px;
-  padding-right: 7em;
+  padding-right: 10em;
 `;
 
 const Opcao = styled.li`

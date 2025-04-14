@@ -15,7 +15,7 @@ const Icone = styled.img`
   height: 30px;
 `;
 
-const icones = [perfil, sacola];
+const icones = [sacola, perfil];
 
 function IconesHeader() {
   return (
