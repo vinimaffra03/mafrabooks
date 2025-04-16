@@ -22,7 +22,6 @@ const GlobalStyle = createGlobalStyle`
   li {
     list-style: none;
   }
-
 `;
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
