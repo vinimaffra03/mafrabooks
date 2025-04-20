@@ -3,22 +3,22 @@ import livro from "../../imgs/livro.png";
 export const livros = [
   {
     id: 1,
-    nome: "O Senhor dos Anéis",
+    nome: "Lideranca com Agilidade",
     src: livro,
   },
   {
     id: 2,
-    nome: "O Senhor dos Anéis",
+    nome: "Javascript para iniciantes",
     src: livro,
   },
   {
     id: 3,
-    nome: "O Senhor dos Anéis",
+    nome: "Desafios Javascript",
     src: livro,
   },
   {
     id: 4,
-    nome: "O Senhor dos Anéis",
+    nome: "Java vs Javascript",
     src: livro,
   },
 ];
