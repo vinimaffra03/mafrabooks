@@ -1,6 +1,7 @@
 import Input from "../Input/index.jsx";
 import styled from "styled-components";
 import { useState } from "react";
+import { livros } from "../../components/Search/livros.js";
 import "../Search/styles.css";
 
 // section
@@ -29,7 +30,9 @@ const Subtitulo = styled.h3`
 `;
 
 function Search() {
-  const [textoDigitado, setTextoDigitado] = useState("");
+  const [livroPesquisado, setLivroPesquisado] = useState([]);
+
+  console.log(livroPesquisado);
 
   return (
     // Container principal da seção de busca section
@@ -44,11 +47,20 @@ function Search() {
       {/* Input de busca */}
       <Input
         placeholder="Escreva sua próxima leitura"
-        onBlur={(evento) => setTextoDigitado(evento.target.value)} // Adicionando um evento onBlur para capturar o valor do input
-      />
+        // Adicionando um evento onBlur para capturar o valor do input
+        onBlur={(evento) => {
+          // Capturando o valor do input quando o evento onBlur é acionado
+          const textoDigitado = evento.target.value;
 
-      {/* Exibindo o texto digitado no input */}
-      <h2 className="teste">{textoDigitado}</h2>
+          // criando filter para filtar um livro e setar o com includes o valor do input
+          const resultadoPesquisa = livros.filter((livro) =>
+            livro.nome.includes(textoDigitado)
+          );
+
+          // setando livro pesquisado com resultado do filter de pesquisa com o texto digitado
+          setLivroPesquisado(resultadoPesquisa);
+        }}
+      />
     </SearchContainer>
   );
 }
