@@ -55,6 +55,12 @@ const ResultadoLivro = styled.div`
 function Search() {
   const [livroPesquisado, setLivroPesquisado] = useState([]);
 
+  const livroSugeridos = livros.map((livro) => (
+    <div>
+      <p>{livro.nome}</p>
+    </div>
+  ));
+
   //console.log(livroPesquisado);
 
   return (
@@ -92,6 +98,11 @@ function Search() {
           <p>{livro.nome}</p>
         </ResultadoLivro>
       ))}
+
+      <div>
+        <h1>LIVROS SUGERIDOS :</h1>
+        <p>{livroSugeridos}</p>
+      </div>
     </SearchContainer>
   );
 }
