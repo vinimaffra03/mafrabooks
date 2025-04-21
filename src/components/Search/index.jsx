@@ -29,10 +29,33 @@ const Subtitulo = styled.h3`
   margin-bottom: 40px;
 `;
 
+const ResultadoLivro = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  cursor: pointer;
+  margin: 1em 35%;
+  border-radius: 1em;
+
+  p {
+    width: 200px;
+  }
+
+  img {
+    width: 100px;
+    padding: 0 0 0 0;
+  }
+
+  &:hover {
+    border: 1px solid white;
+  }
+`;
+
 function Search() {
   const [livroPesquisado, setLivroPesquisado] = useState([]);
 
-  console.log(livroPesquisado);
+  //console.log(livroPesquisado);
 
   return (
     // Container principal da seção de busca section
@@ -61,6 +84,14 @@ function Search() {
           setLivroPesquisado(resultadoPesquisa);
         }}
       />
+
+      {/* Mapeando os livros pesquisados e exibindo o nome e a imagem de cada livro */}
+      {livroPesquisado.map((livro) => (
+        <ResultadoLivro>
+          <img src={livro.src} alt={livro.nome} />
+          <p>{livro.nome}</p>
+        </ResultadoLivro>
+      ))}
     </SearchContainer>
   );
 }
