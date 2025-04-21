@@ -12,6 +12,7 @@ const SearchContainer = styled.section`
   padding: 85px 0;
   height: 270px;
   width: 100%;
+  margin-bottom: 4em;
 `;
 
 // titulo
@@ -88,12 +89,15 @@ function Search() {
       />
 
       {/* Mapeando os livros pesquisados e exibindo o nome e a imagem de cada livro */}
-      {livroPesquisado.map((livro) => (
-        <ResultadoLivro>
-          <img src={livro.src} alt={livro.nome} />
-          <p>{livro.nome}</p>
-        </ResultadoLivro>
-      ))}
+
+      <div style={{ maxHeight: "10em", overflowY: "scroll" }}>
+        {livroPesquisado.map((livro) => (
+          <ResultadoLivro key={livro.nome}>
+            <img src={livro.src} alt={livro.nome} />
+            <p>{livro.nome}</p>
+          </ResultadoLivro>
+        ))}
+      </div>
     </SearchContainer>
   );
 }

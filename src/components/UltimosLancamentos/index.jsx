@@ -1,6 +1,8 @@
 import { livros } from "../UltimosLancamentos/dadosUltimosLancamentos";
 import styled from "styled-components";
 import { TituloSecundario } from "../Titulo";
+import LivrosSugeridos from "../cardsSugestoes";
+import ImagemLivro from "../../imgs/livro2.png";
 
 const UltimosLancamentosContainer = styled.section`
   display: flex;
@@ -8,6 +10,8 @@ const UltimosLancamentosContainer = styled.section`
   background-color: rgb(223, 223, 223);
   height: 100%;
   align-items: center;
+  margin-top: 1em;
+  padding-bottom: 16%;
 `;
 
 const ImagemContainer = styled.div`
@@ -39,6 +43,20 @@ function UltimosLancamentos() {
           <ImagemLivros src={livro.src} alt={livro.nome} />
         ))}
       </ImagemContainer>
+
+      <LivrosSugeridos
+        titulo="Talvez tu tenhas interesse em..."
+        subtitulo="Aprenda Angular 11"
+        descricao="Angular é um framework para desenvolvimento de aplicações web"
+        img={ImagemLivro}
+      />
+
+      <LivrosSugeridos
+        titulo="Talvez tu tenhas interesse em..."
+        subtitulo="Aprenda Angular 11"
+        descricao="Angular é um framework para desenvolvimento de aplicações web"
+        img={ImagemLivro}
+      />
     </UltimosLancamentosContainer>
   );
 }

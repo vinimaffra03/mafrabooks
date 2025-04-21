@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import styled from "styled-components";
 import Search from "./components/Search";
 import UltimosLancamentos from "./components/UltimosLancamentos";
+import Rodape from "./components/Rodape/index";
 
 const AppContainer = styled.div`
   width: 100vw;
@@ -16,6 +17,10 @@ function App() {
       <Header />
       <Search />
       <UltimosLancamentos />
+      <Rodape
+        autor="Vinicius Mafra"
+        linkedin="https://www.linkedin.com/in/viniciusmaffra/"
+      />
     </AppContainer>
   );
 }
