@@ -49,17 +49,13 @@ const ResultadoLivro = styled.div`
 
   &:hover {
     border: 1px solid white;
+    transform: scale(1.05);
+    transition: 0.3s;
   }
 `;
 
 function Search() {
   const [livroPesquisado, setLivroPesquisado] = useState([]);
-
-  const livroSugeridos = livros.map((livro) => (
-    <div>
-      <p>{livro.nome}</p>
-    </div>
-  ));
 
   //console.log(livroPesquisado);
 
@@ -98,11 +94,6 @@ function Search() {
           <p>{livro.nome}</p>
         </ResultadoLivro>
       ))}
-
-      <div>
-        <h1>LIVROS SUGERIDOS :</h1>
-        <p>{livroSugeridos}</p>
-      </div>
     </SearchContainer>
   );
 }
