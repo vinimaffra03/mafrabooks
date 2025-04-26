@@ -55,7 +55,7 @@ function LivrosSugeridos({ titulo, subtitulo, descricao, img }) {
       </div>
       <div>
         <ImgLivro src={img} alt={titulo} />
-        <Botao href="#">Saiba Mais</Botao>
+        <Botao href="/favoritos">Saiba Mais</Botao>
       </div>
     </CardContainer>
   );
