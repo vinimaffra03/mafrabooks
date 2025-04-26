@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import logo from "../../imgs/logo.svg";
 import styled from "styled-components";
 
@@ -13,13 +14,15 @@ const LogoImage = styled.img`
 
 function Logo() {
   return (
-    <LogoContainer>
-      <LogoImage src={logo} alt="Logo" className="img-logo" />
+    <Link to="/">
+      <LogoContainer>
+        <LogoImage src={logo} alt="Logo" className="img-logo" />
 
-      <p>
-        <strong> Mafra</strong>books
-      </p>
-    </LogoContainer>
+        <p>
+          <strong>Mafra</strong>books
+        </p>
+      </LogoContainer>
+    </Link>
   );
 }
 

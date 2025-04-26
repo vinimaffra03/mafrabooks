@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const Opcoes = styled.ul`
   display: flex;
@@ -17,7 +18,7 @@ const Opcao = styled.li`
   font-size: 18px;
 `;
 
-const opcoes = ["CATEGORIAS", "ESTANTE", "FAVORITOS"];
+const opcoes = ["CATEGORIAS", "FAVORITOS", "ESTANTE"];
 
 function OpcoesHeader() {
   return (
@@ -25,7 +26,9 @@ function OpcoesHeader() {
     // , entao criando um item da lista para cada opcao inserindo o parametro passado pelo map
     <Opcoes>
       {opcoes.map((opcao) => (
-        <Opcao>{opcao}</Opcao>
+        <Link to={`/${opcao}`.toLowerCase()}>
+          <Opcao>{opcao}</Opcao>
+        </Link>
       ))}
     </Opcoes>
   );
