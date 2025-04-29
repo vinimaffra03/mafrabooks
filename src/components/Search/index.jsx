@@ -1,8 +1,8 @@
 import Input from "../Input/index.jsx";
 import styled from "styled-components";
-import { useState } from "react";
-import { livros } from "../../components/Search/livros.js";
+import { useEffect, useState } from "react";
 import "../Search/styles.css";
+import { getLivros } from "../../services/livros.js";
 
 // section
 const SearchContainer = styled.section`
@@ -57,6 +57,12 @@ const ResultadoLivro = styled.div`
 
 function Search() {
   const [livroPesquisado, setLivroPesquisado] = useState([]);
+  const [livros, setLivros] = useState([]);
+
+  useEffect(() => {
+    const livrosDaAPI = getLivros();
+    setLivros(livrosDaAPI);
+  }, []);
 
   //console.log(livroPesquisado);
 
